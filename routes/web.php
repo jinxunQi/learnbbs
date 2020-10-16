@@ -37,7 +37,7 @@ Route::post('email/resend', 'Auth\VerificationController@resend')->name('verific
 # ----替换Auth::routes()-------------------------------------------------------------------------------------------------
 
 // 用户控制器
-Route::resource('user', 'UsersController', ['only' => ['show', 'update', 'edit']]);//等同以下
+Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);//等同以下
 //Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 //Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
 //Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
