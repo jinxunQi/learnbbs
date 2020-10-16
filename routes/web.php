@@ -36,4 +36,10 @@ Route::get('email/verify/{id}/{hash}', 'Auth\VerificationController@verify')->na
 Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 # ----替换Auth::routes()-------------------------------------------------------------------------------------------------
 
+// 用户控制器
+Route::resource('user', 'UsersController', ['only' => ['show', 'update', 'edit']]);//等同以下
+//Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+//Route::get('/users/{user}/edit', 'UsersController@edit')->name('users.edit');
+//Route::patch('/users/{user}', 'UsersController@update')->name('users.update');
+
 Route::get('/home', 'HomeController@index')->name('home');
